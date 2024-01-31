@@ -25,7 +25,7 @@ function initialize() {
 // 결과계산
 function displayResult() {
   loading.style.display = "none";
-  result.style.display = "flex";
+  result.style.display = "block";
   const fieldValue = fieldValueInput.value;
   const timeValue = timeValueInput.value;
   fieldResult.innerText = fieldValue;
@@ -70,12 +70,12 @@ window.onclick = function (event) {
 function copyUrl() {
   var currentUrl = window.location.href;
   navigator.clipboard.writeText(currentUrl)
-    .then(function() {
-      alert('주소가 복사되었습니다: ' + currentUrl);
-    })
-    .catch(function(err) {
-      console.error('주소 복사 실패: ', err);
-    });
+      .then(function() {
+        alert('주소가 복사되었습니다: ' + currentUrl);
+      })
+      .catch(function(err) {
+        console.error('주소 복사 실패: ', err);
+      });
 }
 
 // 초기화 함수 호출
